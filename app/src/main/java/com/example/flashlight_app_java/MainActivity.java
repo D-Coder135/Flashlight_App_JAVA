@@ -26,7 +26,10 @@ public class MainActivity extends AppCompatActivity {
         on.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try {
 
+                } catch () {
+                }
             }
         });
     }

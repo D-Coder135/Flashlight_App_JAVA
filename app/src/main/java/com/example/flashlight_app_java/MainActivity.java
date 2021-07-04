@@ -36,5 +36,18 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        off.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.M)
+            @Override
+            public void onClick(View v) {
+                try {
+                    String cameraIdForFlashlight = cameraManager.getCameraIdList()[0];
+                    cameraManager.setTorchMode(cameraIdForFlashlight, false);
+                } catch (CameraAccessException exception) {
+                    System.out.println(exception);
+                }
+            }
+        });
     }
 }

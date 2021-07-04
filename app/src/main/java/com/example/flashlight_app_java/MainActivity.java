@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
                     String cameraIdForFlashlight = cameraManager.getCameraIdList()[0];
                     cameraManager.setTorchMode(cameraIdForFlashlight, true);
                 } catch (CameraAccessException exception) {
+                    System.out.println(exception);
                 }
             }
         });

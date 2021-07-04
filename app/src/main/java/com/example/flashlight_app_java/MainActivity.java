@@ -25,10 +25,12 @@ public class MainActivity extends AppCompatActivity {
         cameraManager = (CameraManager)getSystemService(CAMERA_SERVICE);
 
         on.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View v) {
                 try {
                     String cameraIdForFlashlight = cameraManager.getCameraIdList()[0];
+                    cameraManager.setTorchMode(cameraIdForFlashlight, true);
                 } catch (CameraAccessException exception) {
                 }
             }

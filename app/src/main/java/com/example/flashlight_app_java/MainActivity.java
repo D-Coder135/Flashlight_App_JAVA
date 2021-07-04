@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.hardware.camera2.CameraManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,5 +22,12 @@ public class MainActivity extends AppCompatActivity {
         on = findViewById(R.id.button);
         off = findViewById(R.id.button2);
         cameraManager = (CameraManager)getSystemService(CAMERA_SERVICE);
+
+        on.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }
